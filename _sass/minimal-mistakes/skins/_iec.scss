@@ -4,10 +4,13 @@
 
 /* Colors */
 $text-color: #656565 !default;
+$ita_blue: #0c4270 !default;
+$ita_yellow: #FFCB05 !default;
 
-/* Header *
+/* Header */
 $masthead-link-color: #f1f1f1 !default;
-$masthead-link-color-hover: #FFCB05 !default;
+$masthead-link-color-hover: $ita_yellow !default;
+$masthead-background-color: $ita_blue !default;
 
 /* Footer */
 $footer-background-color: #111523 !default;

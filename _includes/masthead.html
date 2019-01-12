@@ -10,7 +10,7 @@
             {%- else -%}
               {%- assign url = link.url | relative_url -%}
             {%- endif -%}
-            <li class="masthead__menu-item">
+            <li class="masthead__menu-item{% if page.nav_main_selected and link.title == page.nav_main_selected %} active_nav{% endif %}">
               <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
@@ -30,4 +30,11 @@
       </nav>
     </div>
   </div>
+  {%- if page.nav_main_desc -%}
+  <div class="masthead__page-description">
+    <div>
+      <h1>{{ page.nav_main_desc | markdownify | strip_html | strip_newlines | escape_once | upcase }}</h1>
+    </div>
+  </div>
+  {%- endif -%}
 </div>

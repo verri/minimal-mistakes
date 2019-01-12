@@ -47,6 +47,9 @@ $type-size-8: 0.625em !default; // ~10px
    Colors
    ========================================================================== */
 
+$ita_blue: #0c4270 !default;
+$ita_yellow: #FFCB05 !default;
+
 $gray: #7a8288 !default;
 $dark-gray: mix(#000, $gray, 40%) !default;
 $darker-gray: mix(#000, $gray, 60%) !default;

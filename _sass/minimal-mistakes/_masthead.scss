@@ -4,7 +4,7 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  background: $masthead-background-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -56,6 +56,10 @@
   width: 100%;
   clear: both;
 
+  .active_nav {
+    background: $ita-yellow;
+  }
+
   .site-nav {
     margin-left: 0;
 
@@ -80,5 +84,30 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+  }
+}
+
+.masthead__page-description {
+  @include clearfix;
+  margin: 0;
+  width: 100%;
+  background: $ita-yellow;
+
+  div {
+    @include clearfix;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding: 0.75em 1em 0.25em;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+  }
+
+  h1 {
+    color: $background-color;
+    font-size: $type-size-3;
+    font-weight: bold;
   }
 }
