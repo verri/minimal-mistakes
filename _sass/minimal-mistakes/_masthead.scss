@@ -15,7 +15,7 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding: 0.5rem 1em 0 1em;
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -87,14 +87,64 @@
   }
 }
 
-.masthead__page-description {
+// div extendendo toda a largura do pageview e com um div interno para o conteúdo
+// com as margens e paddings seguindo os espaçamentos do footer e menu
+.line_div {
   @include clearfix;
   margin: 0;
   width: 100%;
-  background: $ita-yellow;
 
+  &__inner-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding: 0.75rem 1rem 0.25rem;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+  }
+}
+
+// Cabeçalho superior do site em flexbox
+// Mantêm os divs na mesma linha, para quebrar em duas linhas, utilizar a solução a seguir
+.masthead__page-header {
+  @extend .line_div__inner-wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+  justify-content: space-between;
+
+  color: $ita-yellow;
+
+  &-divisao {
+    font-size: $type-size-5;
+
+    @include breakpoint(max-width $small) {
+      font-size: 3.5vw;
+    }
+  }
+
+  &-tel {
+    font-size: $type-size-6;
+    padding-top: 0.3rem;
+    padding-right: 0.6rem;
+
+    @include breakpoint(max-width $small) {
+      font-size: 2vw;
+    }
+  }
+}
+
+/*.masthead__page-header {
+  @include clearfix;
+  margin: 0;
+  width: 100%;
+  
   div {
-    @include clearfix;
+    //@include clearfix;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -104,10 +154,42 @@
       max-width: $x-large;
     }
   }
+}
+
+.masthead__page-header-divisao {
+  @extend .align-left;
+  font-size: $type-size-6;
+}
+
+.masthead__page-header-tel {
+  @extend .align-right;
+  font-size: $type-size-8;
+  margin-right: 1rem;
+}*/
+
+.masthead__page-description {
+  @extend .line_div;
+  background: $ita-yellow;
 
   h1 {
     color: $background-color;
     font-size: $type-size-3;
     font-weight: bold;
   }
+}
+
+// Não há necessidade do CSS responsivo ao utilizar as propriedades
+// srcset e size da tag img
+.masthead__logo {
+  //@extend .align-left;
+  //height: auto;
+  //max-width: 20vw;
+
+  /*@include breakpoint($medium) { //@media (min-width: $medium)
+    max-width: 5cm;
+  }*/
+
+  // @TODO: verificar se os espaçamentos estão bons em diversos dispositivos
+  margin-right: 0.3em;
+  margin-bottom: 0.5rem;
 }

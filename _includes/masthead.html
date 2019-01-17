@@ -1,8 +1,24 @@
 <div class="masthead">
+  <div class="line_div">
+    <div class="masthead__page-header">
+      <div class="masthead__page-header-divisao">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </div>
+      <div class="masthead__page-header-tel">
+        <i class="fa fa-phone"></i> +55 12 3947-5899
+      </div>
+    </div>
+  </div>
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ita-logo-1100-420.png" srcset="
+        {{ site.url }}{{ site.baseurl }}/assets/images/ita-logo-50-19.png 50w,
+        {{ site.url }}{{ site.baseurl }}/assets/images/ita-logo-200-76.png 200w,
+        {{ site.url }}{{ site.baseurl }}/assets/images/ita-logo-400-153.png 400w,
+        {{ site.url }}{{ site.baseurl }}/assets/images/ita-logo-700-267.png 700w,
+        {{ site.url }}{{ site.baseurl }}/assets/images/ita-logo-1100-420.png 1100w
+        " sizes="(max-width: 768px) 20vw, 190px" alt="ITA Logo" class="masthead__logo">
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             {%- if link.url contains '://' -%}
@@ -32,7 +48,7 @@
   </div>
   {%- if page.nav_main_desc -%}
   <div class="masthead__page-description">
-    <div>
+    <div class="line_div__inner-wrap">
       <h1>{{ page.nav_main_desc | markdownify | strip_html | strip_newlines | escape_once | upcase }}</h1>
     </div>
   </div>
