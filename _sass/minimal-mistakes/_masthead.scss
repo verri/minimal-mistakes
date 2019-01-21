@@ -10,6 +10,7 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
+  font-variant: small-caps;
 
   &__inner-wrap {
     @include clearfix;
@@ -55,10 +56,6 @@
   margin-right: 0;
   width: 100%;
   clear: both;
-
-  .active_nav {
-    background: $ita-yellow;
-  }
 
   .site-nav {
     margin-left: 0;
@@ -117,10 +114,18 @@
   align-self: center;
   justify-content: space-between;
 
-  color: $ita-yellow;
-
   &-divisao {
     font-size: $type-size-5;
+    font-weight: bold;
+
+    a {
+      color: $masthead-highlight;
+      text-decoration: none;
+
+      &:hover {
+        color: mix(#000, $masthead-highlight, 25%);
+      }
+    }
 
     @include breakpoint(max-width $small) {
       font-size: 3.5vw;
@@ -131,6 +136,7 @@
     font-size: $type-size-6;
     padding-top: 0.3rem;
     padding-right: 0.6rem;
+    color: $masthead-highlight;
 
     @include breakpoint(max-width $small) {
       font-size: 2vw;
@@ -169,13 +175,8 @@
 
 .masthead__page-description {
   @extend .line_div;
-  background: $ita-yellow;
-
-  h1 {
-    color: $background-color;
-    font-size: $type-size-3;
-    font-weight: bold;
-  }
+  background: $masthead-highlight;
+  color: mix(#fff, $masthead-link-color, 65%);
 }
 
 // Não há necessidade do CSS responsivo ao utilizar as propriedades

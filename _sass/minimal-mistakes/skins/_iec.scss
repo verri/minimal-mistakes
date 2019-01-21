@@ -4,6 +4,7 @@
 
 /* Colors */
 $text-color: #656565 !default;
+$background-color: #fff !default;
 $ita_blue: #0c4270 !default;
 $ita_yellow: #FFCB05 !default;
 
@@ -11,15 +12,11 @@ $ita_yellow: #FFCB05 !default;
 $masthead-link-color: #f1f1f1 !default;
 $masthead-link-color-hover: $ita_yellow !default;
 $masthead-background-color: $ita_blue !default;
-
-/* Footer */
-$footer-background-color: #111523 !default;
-
-//$muted-text-color: $text-color !default;
-//$primary-color: #ff0000 !default;
-//$border-color: mix(#fff, $text-color, 75%) !default;
-//$link-color: #0000ff !default;
-//$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+$masthead-highlight: $ita_yellow !default;
+$masthead-highlight-hover: $text-color !default;
+$navicon-link-color-hover: $background-color !default;
+//$muted-text-color: $text-color !default; // Cores de headers secundário do layout
+//$link-color: #0000ff !default; // Cores dos links no conteúdo da página
 
 /* contrast syntax highlighting (base16) */
 $base00: #000000 !default;
@@ -49,6 +46,9 @@ $base0f: #b18a3d !default;
     color: $text-color;
   }
 }
+
+/* Footer */
+$footer-background-color: #111523 !default;
 
 .page__footer {
   color: #fff !important; // override
