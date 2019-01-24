@@ -183,6 +183,7 @@
   // links e logo são definidos como padding em suas respectivas classes
   button {
     margin-bottom: 0.3rem;
+    outline: none;
   }
 
   a {
@@ -326,8 +327,8 @@
     }
 
     .active_nav {
-      a:hover {
-        color: $masthead-highlight-hover;
+      a {
+        color: $masthead-highlight;
       }
     }
   }

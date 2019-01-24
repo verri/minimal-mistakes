@@ -18,6 +18,10 @@ $navicon-link-color-hover: $background-color !default;
 //$muted-text-color: $text-color !default; // Cores de headers secundário do layout
 //$link-color: #0000ff !default; // Cores dos links no conteúdo da página
 
+.page__title, .page__content h1 {
+  color: $ita_yellow;
+}
+
 /* contrast syntax highlighting (base16) */
 $base00: #000000 !default;
 $base01: #242422 !default;
