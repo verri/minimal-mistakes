@@ -26,9 +26,29 @@
             {%- else -%}
               {%- assign url = link.url | relative_url -%}
             {%- endif -%}
-            <li class="masthead__menu-item{% if page.nav_main_selected and link.title == page.nav_main_selected %} active_nav{% endif %}">
-              <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-            </li>
+
+            {%- if link.submenus -%}
+              <li class="greedy-submenu masthead__menu-item{% if page.nav_main_selected and link.title == page.nav_main_selected %} active_nav{% endif %}">
+                <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                <ul class="greedy-submenu_dropdown hidden">
+                  {%- for sublink in link.submenus -%}
+                    {%- if sublink.url contains '://' -%}
+                      {%- assign suburl = sublink.url -%}
+                    {%- else -%}
+                      {%- assign suburl = sublink.url | relative_url -%}
+                    {%- endif -%}
+                    <li class="greedy-subitem">
+                      <a href="{{ suburl }}" {% if sublink.description %}title="{{ sublink.description }}"{% endif %}>{{ sublink.title }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+
+            {%- else -%}
+              <li class="masthead__menu-item{% if page.nav_main_selected and link.title == page.nav_main_selected %} active_nav{% endif %}">
+                <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              </li>
+            {%- endif -%}
           {%- endfor -%}
         </ul>
         {% if site.search == true %}

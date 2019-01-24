@@ -260,6 +260,48 @@
         color: $masthead-highlight-hover;
       }
     }
+
+    .greedy-submenu {
+      &:hover {
+        .greedy-submenu_dropdown {
+          visibility: visible;
+          opacity: 1;
+          transition: opacity 0.5s;
+          -webkit-transition: opacity 0.5s;
+        }
+      }
+
+      .greedy-submenu_dropdown {
+        position: absolute;
+        display: block;
+        top: 100%;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        background: $background-color;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(#000, 0.16),
+          0 2px 10px 0 rgba(#000, 0.12);
+        box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
+
+        // Transição para hidden
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.5s, opacity 0.5s linear;
+        -webkit-transition: visibility 0s 0.5s, opacity 0.5s linear;
+  
+        li {
+          display: block;
+          border-bottom: 1px solid $border-color;
+    
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+    }
+
   }
 
   .hidden-links {
