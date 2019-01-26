@@ -298,6 +298,20 @@
             border-bottom: none;
           }
         }
+
+        a {
+          color: $masthead-highlight-hover;
+
+          &:hover {
+            color: $masthead-link-color-hover;
+          }
+          
+          // Remove a borda (abaixo) escura animada durante hover
+          // mantêm os 4px de height
+          &:before {
+            background: $navicon-link-color-hover;
+          }
+        }
       }
 
     }
