@@ -307,9 +307,10 @@
           }
           
           // Remove a borda (abaixo) escura animada durante hover
-          // mantêm os 4px de height
+          // remove os 4px de height, para borda não sobrepor cedilha de ç
           &:before {
-            background: $navicon-link-color-hover;
+            height: 0;
+            //background: $navicon-link-color-hover;
           }
         }
       }
