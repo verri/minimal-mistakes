@@ -9,7 +9,7 @@ layout: archive
 {% endif %}
 
 <h2>
-  <a href="{{site.baseurl}}/news">{{ site.data.ui-text[site.locale].more_news | default: 'More' }}:</a>
+  <a class="no-link" href="{{site.baseurl}}/news">{{ site.data.ui-text[site.locale].more_news | default: 'More' }}:</a>
 </h2>
 
 {% for post in site.posts limit:5 %}

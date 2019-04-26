@@ -71,6 +71,10 @@
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
   }
+  .no-link {
+    color:inherit;
+    text-decoration:none;
+  }
 
   p,
   li,
