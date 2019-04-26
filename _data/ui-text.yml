@@ -237,6 +237,7 @@ pt-BR:
   page                       : "Página"
   pagination_previous        : "Anterior"
   pagination_next            : "Próxima"
+  back_to_top                : "Voltar ao topo"
   breadcrumb_home_label      : "Home"
   breadcrumb_separator       : "/"
   menu_label                 :
@@ -273,6 +274,7 @@ pt-BR:
   loading_label              : "Carregando..."
   contact                    : "Contato"
   rights_reserved            : "Todos direitos reservados"
+  more_news                  : "Mais notícias"
 
 # Italian
 # -------
@@ -1127,7 +1129,7 @@ ro: &DEFAULT_RO
   back_to_top                : "Înapoi în susul paginii"
 ro-RO:
   <<: *DEFAULT_RO
-  
+
 # Punjabi
 # -----------------
 pa: &DEFAULT_PA
@@ -1172,7 +1174,7 @@ pa: &DEFAULT_PA
   results_found              : "ਨਤੀਜਾ ਮਿਲਿਆ/ਮਿਲੇ"
   back_to_top                : "ਵਾਪਸ ਚੋਟੀ 'ਤੇ ਜਾਓ"
 pa-IN:
-  <<: *DEFAULT_PA  
+  <<: *DEFAULT_PA
 # Another locale
 # --------------
 #
